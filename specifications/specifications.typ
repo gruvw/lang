@@ -63,7 +63,8 @@ It is the technical specifications document that define everything about the lan
 
 = Philosophy and Purpose
 
-// Briefly introduce the language's name, core features, and what sets it apart from natural languages and other constructed languages.
+This section explains the philosophy and purpose of the #name language.
+It aims to describe the core values of the language and what sets it apart from natural languages.
 
 == Reason of Existence
 
@@ -89,7 +90,9 @@ The following list represents the principles that govern the language's construc
 + *Efficiency* - The language must fulfill its purpose with clarity (avoiding vague or overly complex expressions) in a concise and intelligible way.
 + *Consistency* - The language must adhere to uniform and predictable rules, avoiding irregularities and contradictions to minimize its cognitive overhead.
 + *Completness* - The language must be capable of expressing any idea or concept, ensuring no gaps in its expressive capacity.
-+ *Modularity* - The language must be constructed with some degree of modularity to allow for modifications of some parts without affecting others, making it easier to shape and evolve.
+
+Additionnaly, the language is constructed with some degree of modularity to allow for modifications of some parts without affecting others, making it easier to shape and evolve.
+Therefore, its construction is split into multiple modules (see further in the document) that aim to be somewhat independant.
 
 == Examples
 
