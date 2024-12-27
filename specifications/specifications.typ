@@ -22,11 +22,17 @@
   radius: 4pt,
 )
 
+#show heading.where(level: 1): it => {
+  pagebreak(weak: true)
+  it
+}
+
 #let first-cap(text) = upper(text.first()) + text.slice(1)
 
 #let link-footnote(url, content) = (
-    link(url, content) +
-    footnote((first-cap(content.text) + ": " + link(url, url)))
+  link(url, content) + footnote((
+    first-cap(content.text) + ": " + link(url, url)
+  ))
 )
 
 #let name = [LANG]
@@ -87,20 +93,32 @@ The following list represents the principles that govern the language's construc
 
 + *Usability* - The language must provide humans with a way to communicate with others (spoken, written, encoded, signed, tactile forms), and support language based thought process.
 + *Simplicity* - The language must follow clear, straightforward rules and structures, making it easy to learn and use.
-+ *Efficiency* - The language must fulfill its purpose with clarity (avoiding vague or overly complex expressions) in a concise and intelligible way.
 + *Consistency* - The language must adhere to uniform and predictable rules, avoiding irregularities and contradictions to minimize its cognitive overhead.
-+ *Completness* - The language must be capable of expressing any idea or concept, ensuring no gaps in its expressive capacity.
++ *Efficiency* - The language must fulfill its purpose with clarity (avoiding vague or overly complex expressions) in a concise and intelligible way.
++ *Completeness* - The language must be capable of expressing any idea or concept, ensuring no gaps in its expressive capacity.
 
-Additionnaly, the language is constructed with some degree of modularity to allow for modifications of some parts without affecting others, making it easier to shape and evolve.
-Therefore, its construction is split into multiple modules (see further in the document) that aim to be somewhat independant.
+Additionally, the language is constructed with some degree of modularity to allow the modification of some parts without affecting the language as a whole, making it easier to shape and evolve.
+Therefore, its construction is split into multiple modules (see further in the document) that aim to be somewhat independent.
 
 == Examples
 
-Bellow are a few examples of how the language's core philosophy rules impacts the language as a whole.
+Below are a few examples of how the language's core philosophical principles impact the language as a whole.
+
+- Each letter is associated with a single sound, and each sound with a single letter. There are no silent letters.
+- Each word has a single form (no #link-footnote("https://en.wikipedia.org/wiki/Inflection")[inflection]). There are no plural form of words, no verb conjugaison, words have neutral gender, etc.
+- Each word aims to have a single meaning, avoiding drastically different definition of a word based on context.
+- Letters have a single form (no accent, no capitalization).
+- No special character like dashes, punctuation marks, etc.
+- There are no #link-footnote("https://en.wikipedia.org/wiki/Homophone")[homophones], ensuring that every spoken word corresponds uniquely to a written word.
+- The vocabulary is constructed to avoid synonym redundancy.
+- There is a single language register (no formal vs. informal).
 
 = Module 1: Orthography
 
-// no capital letters
+// Spelling Rules: The correct arrangement of letters to form words.
+// Punctuation: Marks like commas, periods, or question marks to structure sentences.
+// Capitalization: Rules for when to use uppercase letters (e.g., at the start of sentences or for proper nouns).
+// Diacritics: Marks added to letters to indicate pronunciation (e.g., accents in French, like "é").
 
 = Module 2: Phonology
 
@@ -131,6 +149,9 @@ Bellow are a few examples of how the language's core philosophy rules impacts th
 // signed and tactile
 
 = Module 8: Encoding
+
+// fixed length and variable length
+// ascii compatibility
 
 = Example texts
 
