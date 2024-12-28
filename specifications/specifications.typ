@@ -107,7 +107,7 @@ Below are a few examples of how the language's core philosophical principles imp
 - Each letter is associated with a single sound, and each sound with a single letter. There are no silent letters.
 - Each word has a single form (no #link-footnote("https://en.wikipedia.org/wiki/Inflection")[inflection]). There are no plural form of words, no verb conjugaison, words have neutral gender, etc.
 - Each word aims to have a single meaning, avoiding drastically different definition of a word based on context.
-- Letters have a single form (no accent, no capitalization).
+- There is no #link-footnote("https://en.wikipedia.org/wiki/Diacritic")[diacritic]: letters have a single form (no accent, no capitalization).
 - No special character like dashes, punctuation marks, etc.
 - There are no #link-footnote("https://en.wikipedia.org/wiki/Homophone")[homophones], ensuring that every spoken word corresponds uniquely to a written word.
 - The vocabulary is constructed to avoid synonym redundancy.
@@ -115,10 +115,113 @@ Below are a few examples of how the language's core philosophical principles imp
 
 = Module 1: Orthography
 
+This module is the root of the language.
+It defines how words are formed from its most basic elements: letter and syllables.\
+The orthography of the #name language is designed to be as simple as possible, adhering to the principle of one-to-one correspondence between written and spoken forms.
+
+== Letters
+
+The language is composed of 8 consonants and 8 vowels, making a total of 16 letters in the alphabet.
+
+The consonants are symbols from $C_1$ to $C_8$ and vowels from $V_1$ to $V_8$.
+Each letter has its unique (manuscrit) written form along with a #link-footnote("https://en.wikipedia.org/wiki/Latin_alphabet")[Latin Alphabet] equivalent.
+
+#align(center)[
+  #table(
+    columns: (auto,) * 9,
+    inset: 0.3cm,
+    align: center + horizon,
+    table.header(
+      [#name consonants],
+      [$C_1$],
+      [$C_2$],
+      [$C_3$],
+      [$C_4$],
+      [$C_5$],
+      [$C_6$],
+      [$C_7$],
+      [$C_8$],
+    ),
+    [Written], image(
+      "img/alphabet/a.svg",
+      width: 1cm,
+    ), image(
+      "img/alphabet/a.svg",
+      width: 1cm,
+    ),image(
+      "img/alphabet/a.svg",
+      width: 1cm,
+    ),image(
+      "img/alphabet/a.svg",
+      width: 1cm,
+    ),image(
+      "img/alphabet/a.svg",
+      width: 1cm,
+    ),image(
+      "img/alphabet/a.svg",
+      width: 1cm,
+    ),image(
+      "img/alphabet/a.svg",
+      width: 1cm,
+    ),image(
+      "img/alphabet/a.svg",
+      width: 1cm,
+    ),
+    [Latin], [], [], [], [], [], [], [], [],
+  )
+
+  #table(
+    columns: (auto,) * 9,
+    inset: 0.3cm,
+    align: center + horizon,
+    table.header(
+      [#name Vowels],
+      [$V_1$],
+      [$V_2$],
+      [$V_3$],
+      [$V_4$],
+      [$V_5$],
+      [$V_6$],
+      [$V_7$],
+      [$V_8$],
+    ),
+    [Written], image(
+      "img/alphabet/a.svg",
+      width: 1cm,
+    ), image(
+      "img/alphabet/a.svg",
+      width: 1cm,
+    ),image(
+      "img/alphabet/a.svg",
+      width: 1cm,
+    ),image(
+      "img/alphabet/a.svg",
+      width: 1cm,
+    ),image(
+      "img/alphabet/a.svg",
+      width: 1cm,
+    ),image(
+      "img/alphabet/a.svg",
+      width: 1cm,
+    ),image(
+      "img/alphabet/a.svg",
+      width: 1cm,
+    ),image(
+      "img/alphabet/a.svg",
+      width: 1cm,
+    ),
+    [Latin], [], [], [], [], [], [], [], [],
+  )
+]
+
+== Syllables
+
 // Spelling Rules: The correct arrangement of letters to form words.
 // Punctuation: Marks like commas, periods, or question marks to structure sentences.
 // Capitalization: Rules for when to use uppercase letters (e.g., at the start of sentences or for proper nouns).
 // Diacritics: Marks added to letters to indicate pronunciation (e.g., accents in French, like "é").
+
+== Words
 
 = Module 2: Phonology
 
