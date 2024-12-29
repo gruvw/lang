@@ -143,28 +143,28 @@ Each letter has its unique (manuscrit) written form along with a #link-footnote(
       [$C_8$],
     ),
     [Written], image(
-      "img/alphabet/a.svg",
+      "img/alphabet/c1.svg",
       width: 1cm,
     ), image(
-      "img/alphabet/a.svg",
+      "img/alphabet/c2.svg",
       width: 1cm,
     ),image(
-      "img/alphabet/a.svg",
+      "img/alphabet/c3.svg",
       width: 1cm,
     ),image(
-      "img/alphabet/a.svg",
+      "img/alphabet/c4.svg",
       width: 1cm,
     ),image(
-      "img/alphabet/a.svg",
+      "img/alphabet/c5.svg",
       width: 1cm,
     ),image(
-      "img/alphabet/a.svg",
+      "img/alphabet/c6.svg",
       width: 1cm,
     ),image(
-      "img/alphabet/a.svg",
+      "img/alphabet/c7.svg",
       width: 1cm,
     ),image(
-      "img/alphabet/a.svg",
+      "img/alphabet/c8.svg",
       width: 1cm,
     ),
     [Latin], [], [], [], [], [], [], [], [],
@@ -186,28 +186,28 @@ Each letter has its unique (manuscrit) written form along with a #link-footnote(
       [$V_8$],
     ),
     [Written], image(
-      "img/alphabet/a.svg",
+      "img/alphabet/v1.svg",
       width: 1cm,
     ), image(
-      "img/alphabet/a.svg",
+      "img/alphabet/v2.svg",
       width: 1cm,
     ),image(
-      "img/alphabet/a.svg",
+      "img/alphabet/v3.svg",
       width: 1cm,
     ),image(
-      "img/alphabet/a.svg",
+      "img/alphabet/v4.svg",
       width: 1cm,
     ),image(
-      "img/alphabet/a.svg",
+      "img/alphabet/v5.svg",
       width: 1cm,
     ),image(
-      "img/alphabet/a.svg",
+      "img/alphabet/v6.svg",
       width: 1cm,
     ),image(
-      "img/alphabet/a.svg",
+      "img/alphabet/v7.svg",
       width: 1cm,
     ),image(
-      "img/alphabet/a.svg",
+      "img/alphabet/v8.svg",
       width: 1cm,
     ),
     [Latin], [], [], [], [], [], [], [], [],
