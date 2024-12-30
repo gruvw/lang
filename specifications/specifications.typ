@@ -35,6 +35,8 @@
   ))
 )
 
+#let note = [*Note* -]
+
 #let name = [LANG]
 
 #align(horizon + center)[
@@ -126,7 +128,9 @@ The language is composed of 8 consonants and 8 vowels, making a total of 16 lett
 The consonants are symbols from $C_1$ to $C_8$ and vowels from $V_1$ to $V_8$.
 Each letter has its unique (manuscrit) written form along with a #link-footnote("https://en.wikipedia.org/wiki/Latin_alphabet")[Latin Alphabet] equivalent.
 
+
 #align(center)[
+  #let letterWidth = 0.4cm
   #table(
     columns: (auto,) * 9,
     inset: 0.3cm,
@@ -144,28 +148,28 @@ Each letter has its unique (manuscrit) written form along with a #link-footnote(
     ),
     [Written], image(
       "img/alphabet/c1.svg",
-      width: 1cm,
+      width: letterWidth,
     ), image(
       "img/alphabet/c2.svg",
-      width: 1cm,
+      width: letterWidth,
     ),image(
       "img/alphabet/c3.svg",
-      width: 1cm,
+      width: letterWidth,
     ),image(
       "img/alphabet/c4.svg",
-      width: 1cm,
+      width: letterWidth,
     ),image(
       "img/alphabet/c5.svg",
-      width: 1cm,
+      width: letterWidth,
     ),image(
       "img/alphabet/c6.svg",
-      width: 1cm,
+      width: letterWidth,
     ),image(
       "img/alphabet/c7.svg",
-      width: 1cm,
+      width: letterWidth,
     ),image(
       "img/alphabet/c8.svg",
-      width: 1cm,
+      width: letterWidth,
     ),
     [Latin], [], [], [], [], [], [], [], [],
   )
@@ -187,32 +191,34 @@ Each letter has its unique (manuscrit) written form along with a #link-footnote(
     ),
     [Written], image(
       "img/alphabet/v1.svg",
-      width: 1cm,
+      width: letterWidth,
     ), image(
       "img/alphabet/v2.svg",
-      width: 1cm,
+      width: letterWidth,
     ),image(
       "img/alphabet/v3.svg",
-      width: 1cm,
+      width: letterWidth,
     ),image(
       "img/alphabet/v4.svg",
-      width: 1cm,
+      width: letterWidth,
     ),image(
       "img/alphabet/v5.svg",
-      width: 1cm,
+      width: letterWidth,
     ),image(
       "img/alphabet/v6.svg",
-      width: 1cm,
+      width: letterWidth,
     ),image(
       "img/alphabet/v7.svg",
-      width: 1cm,
+      width: letterWidth,
     ),image(
       "img/alphabet/v8.svg",
-      width: 1cm,
+      width: letterWidth,
     ),
     [Latin], [], [], [], [], [], [], [], [],
   )
 ]
+
+#note There are no capital letter in the #name language.
 
 == Syllables
 
