@@ -35,6 +35,21 @@
   ))
 )
 
+#let moduleCounter = counter("module")
+#let moduleHeading(content) = context {
+  moduleCounter.step()
+    let number = moduleCounter.at(here()).at(0)
+    heading(
+      level: 1,
+      [Module #number - #content],
+    )
+}
+
+#let phonetic(content) = {
+  set text(font: "Roboto")
+  [/#content/]
+}
+
 #let note = [*Note* -]
 
 #let name = [LANG]
@@ -115,7 +130,7 @@ Below are a few examples of how the language's core philosophical principles imp
 - The vocabulary is constructed to avoid synonym redundancy.
 - There is a single language register (no formal vs. informal).
 
-= Module 1: Orthography and Phonology
+#moduleHeading()[Orthography and Phonology]
 
 This module is the root of the language.
 It defines how words are formed from its most basic elements: letter and syllables.\
@@ -140,15 +155,15 @@ Each letter has its unique (manuscrit) written form along with a #link-footnote(
     align: center + horizon,
     table.header(
       [#name consonants],
-      ..range(size).map(i => [$C_#(i+1)$]).flatten(),
+      ..range(size).map(i => [$C_#(i+1)$]),
     ),
     [Written],
     ..range(size).map(i => image(
       "img/alphabet/c" + str(i + 1) + ".svg",
       width: letterWidth,
-    )).flatten(),
+    )),
     [Latin], [p], [k], [t], [s], [l], [n], [f], [g],
-    [IPA], [/p/], [/k/], [/t/], [/s/], [/l/], [/n/], [/f/], [/g/],
+    [IPA], phonetic([p]), phonetic([k]), phonetic([t]), phonetic([s]), phonetic([l]), phonetic([n]), phonetic([f]), phonetic([g]),
   )
 
   #table(
@@ -157,15 +172,15 @@ Each letter has its unique (manuscrit) written form along with a #link-footnote(
     align: center + horizon,
     table.header(
       [#name Vowels],
-      ..range(size).map(i => [$V_#(i+1)$]).flatten(),
+      ..range(size).map(i => [$V_#(i+1)$]),
     ),
     [Written],
     ..range(size).map(i => image(
       "img/alphabet/v" + str(i + 1) + ".svg",
       width: letterWidth,
-    )).flatten(),
-    [Latin], [a], [e], [i], [o], [u], [x], [y], [w], // é u è
-    [IPA], [/a/], [/ɘ/], [/i/], [/o/], [/u/], [/e/], [/ɨ/], [/ɛ/],
+    )),
+    [Latin], [a], [e], [i], [o], [u], [x], [y], [w], // ou é u è
+    [IPA], phonetic([a]), phonetic([ɘ]), phonetic([i]), phonetic([o]), phonetic([u]), phonetic([e]), phonetic([ɨ]), phonetic([ɛ]),
   )
 ]
 
@@ -183,7 +198,7 @@ Each letter has its unique (manuscrit) written form along with a #link-footnote(
 
 == Words
 
-= Module 2: Syntax
+#moduleHeading()[Syntax]
 
 // no punctuation, punctuation are words
 // sentence termination character ?
@@ -192,24 +207,24 @@ Each letter has its unique (manuscrit) written form along with a #link-footnote(
 
 // verbs can be used as nouns and interchangeably ?
 
-= Module 3: Grammar
+#moduleHeading()[Grammar]
 
-= Module 4: Pragmatics
+#moduleHeading()[Pragmatics]
 
 // Examines how context influences language use and meaning in conversation.
 // Example content: Politeness strategies, tone, and implied meanings.
 // Discusses variations or regional differences within your constructed language.
 // Example content: Formal vs. informal language, slang, or alternate pronunciation rules.
 
-= Module 5: Lexicon
+#moduleHeading()[Lexicon]
 
 == Core words
 
-= Module 6: Accessibility
+#moduleHeading()[Accessibility]
 
 // signed and tactile
 
-= Module 7: Encoding
+#moduleHeading()[Encoding]
 
 // fixed length and variable length
 // ascii compatibility
