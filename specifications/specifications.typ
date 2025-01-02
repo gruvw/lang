@@ -110,12 +110,12 @@ Below are a few examples of how the language's core philosophical principles imp
 - Each word has a single form (no #link-footnote("https://en.wikipedia.org/wiki/Inflection")[inflection]). There are no plural form of words, no verb conjugaison, words have neutral gender, etc.
 - Each word aims to have a single meaning, avoiding drastically different definition of a word based on context.
 - There is no #link-footnote("https://en.wikipedia.org/wiki/Diacritic")[diacritic]: letters have a single form (no accent, no capitalization).
-- No special character like dashes, punctuation marks, etc.
+- No special character like dashes and aostrophe.
 - There are no #link-footnote("https://en.wikipedia.org/wiki/Homophone")[homophones], ensuring that every spoken word corresponds uniquely to a written word.
 - The vocabulary is constructed to avoid synonym redundancy.
 - There is a single language register (no formal vs. informal).
 
-= Module 1: Orthography
+= Module 1: Orthography and Phonology
 
 This module is the root of the language.
 It defines how words are formed from its most basic elements: letter and syllables.\
@@ -126,99 +126,51 @@ The orthography of the #name language is designed to be as simple as possible, a
 The language is composed of 8 consonants and 8 vowels, making a total of 16 letters in the alphabet.
 
 The consonants are symbols from $C_1$ to $C_8$ and vowels from $V_1$ to $V_8$.
-Each letter has its unique (manuscrit) written form along with a #link-footnote("https://en.wikipedia.org/wiki/Latin_alphabet")[Latin Alphabet] equivalent.
+Each letter has its unique (manuscrit) written form along with a #link-footnote("https://en.wikipedia.org/wiki/Latin_alphabet")[Latin Alphabet] equivalent, and its #link-footnote("https://en.wikipedia.org/wiki/International_Phonetic_Alphabet")[IPA] pronounciation.
 
 
 #align(center)[
   #let letterWidth = 0.4cm
+  #let inset = 0.3cm
+  #let size = 8
+
   #table(
-    columns: (auto,) * 9,
-    inset: 0.3cm,
+    columns: (auto,) * (size + 1),
+    inset: inset,
     align: center + horizon,
     table.header(
       [#name consonants],
-      [$C_1$],
-      [$C_2$],
-      [$C_3$],
-      [$C_4$],
-      [$C_5$],
-      [$C_6$],
-      [$C_7$],
-      [$C_8$],
+      ..range(size).map(i => [$C_#(i+1)$]).flatten(),
     ),
-    [Written], image(
-      "img/alphabet/c1.svg",
+    [Written],
+    ..range(size).map(i => image(
+      "img/alphabet/c" + str(i + 1) + ".svg",
       width: letterWidth,
-    ), image(
-      "img/alphabet/c2.svg",
-      width: letterWidth,
-    ),image(
-      "img/alphabet/c3.svg",
-      width: letterWidth,
-    ),image(
-      "img/alphabet/c4.svg",
-      width: letterWidth,
-    ),image(
-      "img/alphabet/c5.svg",
-      width: letterWidth,
-    ),image(
-      "img/alphabet/c6.svg",
-      width: letterWidth,
-    ),image(
-      "img/alphabet/c7.svg",
-      width: letterWidth,
-    ),image(
-      "img/alphabet/c8.svg",
-      width: letterWidth,
-    ),
-    [Latin], [], [], [], [], [], [], [], [],
+    )).flatten(),
+    [Latin], [p], [k], [t], [s], [l], [n], [f], [g],
+    [IPA], [/p/], [/k/], [/t/], [/s/], [/l/], [/n/], [/f/], [/g/],
   )
 
   #table(
-    columns: (auto,) * 9,
-    inset: 0.3cm,
+    columns: (auto,) * (size + 1),
+    inset: inset,
     align: center + horizon,
     table.header(
       [#name Vowels],
-      [$V_1$],
-      [$V_2$],
-      [$V_3$],
-      [$V_4$],
-      [$V_5$],
-      [$V_6$],
-      [$V_7$],
-      [$V_8$],
+      ..range(size).map(i => [$V_#(i+1)$]).flatten(),
     ),
-    [Written], image(
-      "img/alphabet/v1.svg",
+    [Written],
+    ..range(size).map(i => image(
+      "img/alphabet/v" + str(i + 1) + ".svg",
       width: letterWidth,
-    ), image(
-      "img/alphabet/v2.svg",
-      width: letterWidth,
-    ),image(
-      "img/alphabet/v3.svg",
-      width: letterWidth,
-    ),image(
-      "img/alphabet/v4.svg",
-      width: letterWidth,
-    ),image(
-      "img/alphabet/v5.svg",
-      width: letterWidth,
-    ),image(
-      "img/alphabet/v6.svg",
-      width: letterWidth,
-    ),image(
-      "img/alphabet/v7.svg",
-      width: letterWidth,
-    ),image(
-      "img/alphabet/v8.svg",
-      width: letterWidth,
-    ),
-    [Latin], [], [], [], [], [], [], [], [],
+    )).flatten(),
+    [Latin], [a], [e], [i], [o], [u], [x], [y], [w], // é u è
+    [IPA], [/a/], [/ɘ/], [/i/], [/o/], [/u/], [/e/], [/ɨ/], [/ɛ/],
   )
 ]
 
-#note There are no capital letter in the #name language.
+- There are no capital letter in the #name language.
+- There are no letters that have context-dependent sound values.
 
 == Syllables
 
@@ -227,11 +179,11 @@ Each letter has its unique (manuscrit) written form along with a #link-footnote(
 // Capitalization: Rules for when to use uppercase letters (e.g., at the start of sentences or for proper nouns).
 // Diacritics: Marks added to letters to indicate pronunciation (e.g., accents in French, like "é").
 
+#note The alphabet is said by enumerating syllables made of the same number letters ($C_1V_1$, $C_2V_2$, ...): pa ke ti so lu nx fy gw.
+
 == Words
 
-= Module 2: Phonology
-
-= Module 3: Syntax
+= Module 2: Syntax
 
 // no punctuation, punctuation are words
 // sentence termination character ?
@@ -240,24 +192,24 @@ Each letter has its unique (manuscrit) written form along with a #link-footnote(
 
 // verbs can be used as nouns and interchangeably ?
 
-= Module 4: Grammar
+= Module 3: Grammar
 
-= Module 5: Pragmatics
+= Module 4: Pragmatics
 
 // Examines how context influences language use and meaning in conversation.
 // Example content: Politeness strategies, tone, and implied meanings.
 // Discusses variations or regional differences within your constructed language.
 // Example content: Formal vs. informal language, slang, or alternate pronunciation rules.
 
-= Module 6: Lexicon
+= Module 5: Lexicon
 
 == Core words
 
-= Module 7: Accessibility
+= Module 6: Accessibility
 
 // signed and tactile
 
-= Module 8: Encoding
+= Module 7: Encoding
 
 // fixed length and variable length
 // ascii compatibility
