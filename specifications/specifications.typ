@@ -143,7 +143,6 @@ The language is composed of 8 consonants and 8 vowels, making a total of 16 lett
 The consonants are symbols from $C_1$ to $C_8$ and vowels from $V_1$ to $V_8$.
 Each letter has its unique (manuscrit) written form along with a #link-footnote("https://en.wikipedia.org/wiki/Latin_alphabet")[Latin Alphabet] equivalent, and its #link-footnote("https://en.wikipedia.org/wiki/International_Phonetic_Alphabet")[IPA] pronounciation.
 
-
 #align(center)[
   #let letterWidth = 0.4cm
   #let inset = 0.3cm
@@ -189,16 +188,22 @@ Each letter has its unique (manuscrit) written form along with a #link-footnote(
 
 == Syllables
 
-// Spelling Rules: The correct arrangement of letters to form words.
-// Punctuation: Marks like commas, periods, or question marks to structure sentences.
-// Capitalization: Rules for when to use uppercase letters (e.g., at the start of sentences or for proper nouns).
-// Diacritics: Marks added to letters to indicate pronunciation (e.g., accents in French, like "é").
+In the #name language, every syllable is formed of two letters: a consonant followed by a vowel (of the form $C_i V_i$).
+
+Therefore, there are a total of 64 possible syllables in #name.
 
 #note The alphabet is said by enumerating syllables made of the same number letters ($C_1V_1$, $C_2V_2$, ...): pa ke ti so lu nx fy gw.
 
 == Words
 
+A word in the #name language is made by concatenating from 1 up to 3 syllables.
+
+The 64 words that are made of a single syllable are called core words (see @core-words).
+
 #moduleHeading()[Syntax]
+
+// Punctuation: Marks like commas, periods, or question marks to structure sentences.
+// Capitalization: Rules for when to use uppercase letters (e.g., at the start of sentences or for proper nouns).
 
 // no punctuation, punctuation are words
 // sentence termination character ?
@@ -218,7 +223,7 @@ Each letter has its unique (manuscrit) written form along with a #link-footnote(
 
 #moduleHeading()[Lexicon]
 
-== Core words
+== Core words <core-words>
 
 #moduleHeading()[Accessibility]
 
