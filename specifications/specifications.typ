@@ -47,7 +47,7 @@
 
 #let phonetic(content) = {
   set text(font: "Roboto")
-  [/#content/]
+  [\[#content\]]
 }
 
 #let note = [*Note* -]
@@ -161,8 +161,8 @@ Each letter has its unique (manuscrit) written form along with a #link-footnote(
       "img/alphabet/c" + str(i + 1) + ".svg",
       width: letterWidth,
     )),
-    [Latin], [p], [k], [t], [s], [l], [n], [f], [g],
-    [IPA], phonetic([p]), phonetic([k]), phonetic([t]), phonetic([s]), phonetic([l]), phonetic([n]), phonetic([f]), phonetic([g]),
+    [Latin], [p], [k], [t], [s], [l], [n], [f], [h],
+    [IPA], phonetic([p]), phonetic([k]), phonetic([t]), phonetic([s]), phonetic([l]), phonetic([n]), phonetic([f]), phonetic([ʃ]),
   )
 
   #table(
@@ -192,7 +192,7 @@ In the #name language, every syllable is formed of two letters: a consonant foll
 
 Therefore, there are a total of 64 possible syllables in #name.
 
-#note The alphabet is said by enumerating syllables made of the same number letters ($C_1V_1$, $C_2V_2$, ...): pa ke ti so lu nx fy gw.
+#note The alphabet is said by enumerating syllables made of the same number letters ($C_1V_1$, $C_2V_2$, ...): pa ke ti so lu nx fy hw.
 
 == Words
 
