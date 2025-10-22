@@ -51,6 +51,7 @@
 }
 
 #let note = [*Note* -]
+#let use(content) = text(fill: blue)["#content"]
 
 #let name = [LANG]
 
@@ -130,7 +131,7 @@ Below are a few examples of how the language's core philosophical principles imp
 - The vocabulary is constructed to avoid synonym redundancy.
 - There is a single language register (no formal vs. informal).
 
-#moduleHeading()[Orthography and Phonology]
+#moduleHeading[Orthography and Phonology]
 
 This module is the root of the language.
 It defines how words are formed from its most basic elements: letter and syllables.\
@@ -192,7 +193,7 @@ In the #name language, every syllable is formed of two letters: a consonant foll
 
 Therefore, there are a total of 64 possible syllables in #name.
 
-#note The alphabet is said by enumerating syllables made of the same number letters ($C_1V_1$, $C_2V_2$, ...): pa ke ti so lu nx fy hw.
+#note The alphabet is said by enumerating syllables made of the same number letters ($C_1V_1$, $C_2V_2$, ...): #use[pa ke ti so lu nx fy hw].
 
 == Words
 
@@ -200,7 +201,19 @@ A word in the #name language is made by concatenating from 1 up to 3 syllables.
 
 The 64 words that are made of a single syllable are called core words (see @core-words).
 
-#moduleHeading()[Syntax]
+=== Spelling
+
+By design the need to spell words out loud in the #name language is quite rare:
+
+- Each letter is assigned to a single sound/prononciation: no silent letter.
+- Each sound is assigned to a single letter: no new sound by combining letters.
+- There are only 16 letters/sound: not many possibilities.
+- Sounds have been chosen to be relatively distinct: no letter makes a sound close to another one
+- You always expect the interleaving of consonants and vowels: no difficult sound like those formed by multiple consonants, reduce the set of expected letters you could hear to 8 per character
+
+However, if you end up still needing to spell a word out loud (e.g. over the radio), do so simply by repeating the word: to spell #use[tali] we would say #use[tali tali].
+
+#moduleHeading[Syntax]
 
 // Punctuation: Marks like commas, periods, or question marks to structure sentences.
 // Capitalization: Rules for when to use uppercase letters (e.g., at the start of sentences or for proper nouns).
@@ -212,24 +225,24 @@ The 64 words that are made of a single syllable are called core words (see @core
 
 // verbs can be used as nouns and interchangeably ?
 
-#moduleHeading()[Grammar]
+#moduleHeading[Grammar]
 
-#moduleHeading()[Pragmatics]
+#moduleHeading[Pragmatics]
 
 // Examines how context influences language use and meaning in conversation.
 // Example content: Politeness strategies, tone, and implied meanings.
 // Discusses variations or regional differences within your constructed language.
 // Example content: Formal vs. informal language, slang, or alternate pronunciation rules.
 
-#moduleHeading()[Lexicon]
+#moduleHeading[Lexicon]
 
 == Core words <core-words>
 
-#moduleHeading()[Accessibility]
+#moduleHeading[Accessibility]
 
 // signed and tactile
 
-#moduleHeading()[Encoding]
+#moduleHeading[Encoding]
 
 // fixed length and variable length
 // ascii compatibility
