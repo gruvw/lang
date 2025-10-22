@@ -179,7 +179,7 @@ Each letter has its unique (manuscrit) written form along with a #link-footnote(
       "img/alphabet/v" + str(i + 1) + ".svg",
       width: letterWidth,
     )),
-    [Latin], [a], [e], [i], [o], [u], [x], [y], [w], // ou é u è
+    [Latin], [a], [e], [i], [o], [u], [x], [y], [z], // ou é u è
     [IPA], phonetic([a]), phonetic([ɘ]), phonetic([i]), phonetic([o]), phonetic([u]), phonetic([e]), phonetic([ɨ]), phonetic([ɛ]),
   )
 ]
@@ -193,7 +193,7 @@ In the #name language, every syllable is formed of two letters: a consonant foll
 
 Therefore, there are a total of 64 possible syllables in #name.
 
-#note The alphabet is said by enumerating syllables made of the same number letters ($C_1V_1$, $C_2V_2$, ...): #use[pa ke ti so lu nx fy hw].
+#note The alphabet is said by enumerating syllables made of the same number letters ($C_1V_1$, $C_2V_2$, ...): #use[pa ke ti so lu nx fy hz].
 
 == Words
 
