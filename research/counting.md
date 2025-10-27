@@ -34,36 +34,41 @@ each letter is assigned to a specific syllable
 98: ji
 99: jj
 
-x00: ka
-x0000: kb
-x000000: kc
-x00000000: kd
+67: gh
 
-400 - 4'00: 04 x00
-4'000 - 40'00: 40 x00
-40'000 - 4'00'00: 04 x0000
-400'002 - 40'00'02: 40 x0000 02
-4'000'000 - 04'00'00'00: 04 x000000
-40'000'000 - 40'00'00'00: 40 x000000
-155'000'000 - 15'50'00'00'00: 15 50 x000000
-400'000'000 - 04'00'00'00'00: 04 x00000000
-4'000'000'000 - 40'00'00'00'00: 40 x00000000
-4'000'210'000 - 40 x00000000 21 x0000
-9'900'000'000 - 99'00'00'00'00: 99 x00000000
+"amount of power of 100"
+|00: kb (word for time 100^1; "100^01" "100^ab": kb)
+|0000: kc (word for time 100^2)
+|000000: kd (word for time 100^3)
+|00000000: ke (word for time 100^4)
+
+400 - 4'00: 04 |00
+4'000 - 40'00: 40 |00
+40'000 - 4'00'00: 04 |0000
+400'002 - 40'00'02: 40 |0000 02
+4'000'000 - 04'00'00'00: 04 |000000
+40'000'000 - 40'00'00'00: 40 |000000
+155'000'000 - 15'50'00'00'00: 15 50 |000000
+400'000'000 - 04'00'00'00'00: 04 |00000000
+4'000'000'000 - 40'00'00'00'00: 40 |00000000
+4'000'210'000 - 40 |00000000 21 |0000
+9'900'000'000 - 99'00'00'00'00: 99 |00000000
 9'999'999'999 - 99'99'99'99'99: 99 99 99 99 99
 
-after using a x0000 type multiplier, the following number is assumed to be additionned to the total; only allowed for a smaller number after that
+aj jj jj jj
 
-it is allowed to say any number by using a sequence of base 100 number words, but if the precision is not required it is better to use the x0000 type multipliers
-if a number contains a 00 group, it is better to use a x0000 type multiplier e.g. 43'001'122 - 43'00'11'22: 43 x000000 11 22 (not 43 00 11 22)
+after using a |0000 type multiplier, the following number is assumed to be additionned to the total; only allowed for a smaller number after that
+
+it is allowed to say any number by using a sequence of base 100 number words, but if the precision is not required it is better to use the |0000 type multipliers
+if a number contains a 00 group, it is better to use a |0000 type multiplier e.g. 43'001'122 - 43'00'11'22: 43 |000000 11 22 (not 43 00 11 22)
 
 ## Decimals
 
-.: ak (word for decimal marker)
+.: ka (word for decimal marker)
 
 then the numbers two by two using the counting system base 100
 
-very rarely but still ok to use the x0000 type multipliers
+very rarely but still ok to use the |0000 type multipliers
 
 no prefacing 00, prefacing zero is implied: 0.56 is .56
 
@@ -73,7 +78,7 @@ no prefacing 00, prefacing zero is implied: 0.56 is .56
 
 ## Decimal exponent notation
 
-0^: ke (word for "times 10 power" x10^, or concatenate with X number of zeros)
+0^: kk (word for "times 10 power" x10^, or concatenate with X number of zeros)
 
 it is prefered for the exponent to be an even number
 

@@ -180,7 +180,7 @@ Each letter has its unique (manuscrit) written form along with a #link-footnote(
       width: letterWidth,
     )),
     [Latin], [a], [e], [i], [o], [u], [x], [y], [z], // ou é u è
-    [IPA], phonetic([a]), phonetic([ɘ]), phonetic([i]), phonetic([o]), phonetic([u]), phonetic([e]), phonetic([ɨ]), phonetic([ɛ]),
+    [IPA], phonetic([a]), phonetic([ɘ]), phonetic([i]), phonetic([o]), phonetic([ɨ]), phonetic([e]), phonetic([u]), phonetic([ɛ]),
   )
 ]
 
