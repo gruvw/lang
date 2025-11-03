@@ -1,3 +1,4 @@
+#set document(date: none)
 #set page(paper: "a4", margin: 2cm)
 #set text(font: "Open Sans", size: 12pt)
 #set heading(numbering: "1.1 ")
@@ -162,8 +163,8 @@ Each letter has its unique (manuscrit) written form along with a #link-footnote(
       "img/alphabet/c" + str(i + 1) + ".svg",
       width: letterWidth,
     )),
-    [Latin], [p], [k], [t], [s], [l], [n], [f], [h],
-    [IPA], phonetic([p]), phonetic([k]), phonetic([t]), phonetic([s]), phonetic([l]), phonetic([n]), phonetic([f]), phonetic([ʃ]),
+    [Latin], [p], [k], [t], [s], [l], [m], [f], [h],
+    [IPA], phonetic([p]), phonetic([k]), phonetic([t]), phonetic([s]), phonetic([l]), phonetic([m]), phonetic([f]), phonetic([ʃ]),
   )
 
   #table(
@@ -180,7 +181,7 @@ Each letter has its unique (manuscrit) written form along with a #link-footnote(
       width: letterWidth,
     )),
     [Latin], [a], [e], [i], [o], [u], [x], [y], [z], // ou é u è
-    [IPA], phonetic([a]), phonetic([ɘ]), phonetic([i]), phonetic([o]), phonetic([ɨ]), phonetic([e]), phonetic([u]), phonetic([ɛ]),
+    [IPA], phonetic([a]), phonetic([e]), phonetic([i]), phonetic([o]), phonetic([u]), phonetic([ɘ]), phonetic([ɨ]), phonetic([ɛ]),
   )
 ]
 
