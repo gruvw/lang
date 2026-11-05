@@ -60,7 +60,7 @@
   #text(size: 32pt)[The #name\ language specifications]
   #v(100pt)
   English\
-  Version 0.0.1
+  Version 0.0.2
 
   Author: Lucas Jung
 ]
@@ -140,67 +140,89 @@ The orthography of the #name language is designed to be as simple as possible, a
 
 == Letters
 
-The language is composed of 8 consonants and 8 vowels, making a total of 16 letters in the alphabet.
+The language is composed of 6 vowels and 14 consonants, making a total of 20 letters in the alphabet.
 
-The consonants are symbols from $C_1$ to $C_8$ and vowels from $V_1$ to $V_8$.
-Each letter has its unique (manuscrit) written form along with a #link-footnote("https://en.wikipedia.org/wiki/Latin_alphabet")[Latin Alphabet] equivalent, and its #link-footnote("https://en.wikipedia.org/wiki/International_Phonetic_Alphabet")[IPA] pronounciation.
+The vowels are noted $V_1$ to $V_6$ and the consonants $C_1$ to $C_14$.
+Each letter is given with its #link-footnote("https://en.wikipedia.org/wiki/Latin_alphabet")[Latin Alphabet] equivalent and its #link-footnote("https://en.wikipedia.org/wiki/International_Phonetic_Alphabet")[IPA] pronounciation.
 
 #align(center)[
-  #let letterWidth = 0.4cm
-  #let inset = 0.3cm
-  #let size = 8
-
   #table(
-    columns: (auto,) * (size + 1),
-    inset: inset,
+    columns: (auto,) * 7,
+    inset: 0.3cm,
     align: center + horizon,
     table.header(
-      [#name consonants],
-      ..range(size).map(i => [$C_#(i+1)$]),
+      [Vowels],
+      ..range(6).map(i => [$V_#(i+1)$]),
     ),
-    [Written],
-    ..range(size).map(i => image(
-      "img/alphabet/c" + str(i + 1) + ".svg",
-      width: letterWidth,
-    )),
-    [Latin], [p], [k], [t], [s], [l], [m], [f], [h],
-    [IPA], phonetic([p]), phonetic([k]), phonetic([t]), phonetic([s]), phonetic([l]), phonetic([m]), phonetic([f]), phonetic([ʃ]),
+    [Latin], [a], [e], [i], [o], [u], [y],
+    [IPA], phonetic([a]), phonetic([e]), phonetic([i]), phonetic([o]), phonetic([u]), phonetic([ai̯]),
   )
 
   #table(
-    columns: (auto,) * (size + 1),
-    inset: inset,
+    columns: (auto,) * 15,
+    inset: 0.2cm,
     align: center + horizon,
     table.header(
-      [#name Vowels],
-      ..range(size).map(i => [$V_#(i+1)$]),
+      [Consonants],
+      ..range(14).map(i => [$C_#(i+1)$]),
     ),
-    [Written],
-    ..range(size).map(i => image(
-      "img/alphabet/v" + str(i + 1) + ".svg",
-      width: letterWidth,
-    )),
-    [Latin], [a], [e], [i], [o], [u], [x], [y], [z], // ou é u è
-    [IPA], phonetic([a]), phonetic([e]), phonetic([i]), phonetic([o]), phonetic([u]), phonetic([ɘ]), phonetic([ɨ]), phonetic([ɛ]),
+    [Latin], [f], [s], [x], [j], [w], [p], [t], [k], [b], [d], [g], [m], [n], [l],
+    [IPA], phonetic([f]), phonetic([s]), phonetic([ʃ]), phonetic([j]), phonetic([w]), phonetic([pʰ]), phonetic([tʰ]), phonetic([kʰ]), phonetic([b]), phonetic([d]), phonetic([g]), phonetic([m]), phonetic([n]), phonetic([l]),
   )
 ]
 
 - There are no capital letter in the #name language.
 - There are no letters that have context-dependent sound values.
+- #use[y] is a single vowel: the sound of "eye" in English, gliding from #phonetic([a]) to #phonetic([i]).
+- #use[p], #use[t] and #use[k] are aspirated (followed by a small puff of air). #use[b], #use[d] and #use[g] are fully voiced.
+- #use[l] is always a clear #phonetic([l]) (as in French or Spanish), never a tap. #use[n] is fully nasal.
 
 == Syllables
 
-In the #name language, every syllable is formed of two letters: a consonant followed by a vowel (of the form $C_i V_i$).
+In the #name language, every syllable is formed of two letters: a consonant followed by a vowel (of the form $C_i V_j$).
 
-Therefore, there are a total of 64 possible syllables in #name.
+Therefore, there are a total of $14 times 6 = 84$ possible syllables in #name.
 
-#note The alphabet is said by enumerating syllables made of the same number letters ($C_1V_1$, $C_2V_2$, ...): #use[pa ke ti so lu nx fy hz].
+== Stress
+
+The first syllable of every word is lightly stressed (slightly louder and longer).
+
+- Stress never changes the meaning of a word.
+- Unstressed syllables keep the full sound of their vowel.
 
 == Words
 
-A word in the #name language is made by concatenating from 1 up to 3 syllables.
+A word in the #name language is made by concatenating from 1 up to 4 syllables.
 
-The 64 words that are made of a single syllable are called core words (see @core-words).
+The length of a word is given by its first syllable:
+
+#align(center)[
+  #table(
+    columns: 4,
+    inset: 0.3cm,
+    align: center + horizon,
+    table.header([First consonant], [First vowel], [Word length], [Possible words]),
+    [f s x j w], [any], [1 syllable], [30],
+    [p t k b d g], [any], [2 syllables], [3,024],
+    [m n l], [a e i o y], [3 syllables], [105,840],
+    [m n l], [u], [4 syllables], [1,778,112],
+  )
+]
+
+The 30 words made of a single syllable are called core words (see @core-words).
+
+#note Words of 4 syllables are reserved for the future evolution of the language and are not used yet.
+
+=== Word Boundaries
+
+Since the first syllable of each word gives its length, the boundaries between words are fully determined by the sounds alone.
+No pause is needed between words when speaking.
+
+For example, the sequence of sounds #use[fatokimelosa] can only be read as #use[fa toki melosa]:
+#use[f] starts a 1 syllable word, #use[t] a 2 syllables word and #use[m] (followed by #use[e]) a 3 syllables word.
+
+In writing, words are always separated by a single space.
+The space only marks these boundaries and carries no additional information.
 
 === Spelling
 
@@ -208,9 +230,9 @@ By design the need to spell words out loud in the #name language is quite rare:
 
 - Each letter is assigned to a single sound/prononciation: no silent letter.
 - Each sound is assigned to a single letter: no new sound by combining letters.
-- There are only 16 letters/sound: not many possibilities.
-- Sounds have been chosen to be relatively distinct: no letter makes a sound close to another one
-- You always expect the interleaving of consonants and vowels: no difficult sound like those formed by multiple consonants, reduce the set of expected letters you could hear to 8 per character
+- There are only 20 letters/sound: not many possibilities.
+- Sounds have been chosen to be easy to pronounce and relatively distinct.
+- You always expect the interleaving of consonants and vowels: no difficult sound like those formed by multiple consonants, reduce the set of expected letters you could hear to 14 consonants or 6 vowels.
 
 However, if you end up still needing to spell a word out loud (e.g. over the radio), do so simply by repeating the word: to spell #use[tali] we would say #use[tali tali].
 
@@ -239,6 +261,20 @@ However, if you end up still needing to spell a word out loud (e.g. over the rad
 
 == Core words <core-words>
 
+== Word Assignment
+
+- The most frequent concepts are given the shortest words.
+- Some words are kept unassigned for now: words containing #use[y], the core words #use[ji] and #use[wu], and all 4 syllables words.
+- Frequent words never differ by a single close sound only (#use[p]/#use[t]/#use[k], #use[b]/#use[d]/#use[g], #use[m]/#use[n]/#use[l], #use[s]/#use[x], #use[a]/#use[y]).
+- 3 syllables words never differ only by #use[m]/#use[n]/#use[l] in their first syllable.
+- A word is never reassigned to a new meaning. An obsolete word is marked as deprecated and keeps its meaning.
+
+== Compounds
+
+- Words placed side by side keep their literal meaning.
+- A fixed compound term joins its parts with a dedicated core word.
+- A very frequent compound term can receive its own (shorter) word, the compound term is then deprecated.
+
 #moduleHeading[Accessibility]
 
 // signed and tactile
@@ -247,6 +283,7 @@ However, if you end up still needing to spell a word out loud (e.g. over the rad
 
 // fixed length and variable length
 // ascii compatibility
+// no space needed: word boundaries are implicit
 
 = Example texts
 
